@@ -2,6 +2,7 @@ install:
 	poetry install
 brain-games:
 	poetry run brain-games
+	poetry run brain-even
 build:
 	poetry build
 publish:
@@ -10,3 +11,5 @@ package-install:
 	python3 -m pip install --user dist/*.whl
 make lint:
 	poetry run wemake-python-styleguide brain_games
+brain_even:
+	poetry run brain-even
