@@ -7,11 +7,13 @@ packages = [
   { include = "brain_games" },
 ]
 
-
 [tool.poetry.dependencies]
 python = "^3.8"
+prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+wemake-python-styleguide = "^0.15.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -19,4 +21,34 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+
+branch = true
+
+[flake8]
+accept-encodings = 'utf-8'
+max-complexity = 6
+statistics = false
+max-line-length = 80
+doctests = true
+enable-extensions = 'G'
+isort-show-traceback = true
+
+# clean default ignore list
+ignore = ''
+
+per-file-ignores = ''
+  # it is possibble to have prints in scripts
+  # hexlet_python_package/scripts/*.py: WPS421
+
+#[tool:pytest]
+norecursedirs = '__pycache__'
+addopts = '--strict-markers'
+
+[isort]
+# See https://github.com/timothycrosley/isort#multi-line-output-modes
+multi_line_output = 3
+include_trailing_comma = true
+default_section = 'FIRSTPARTY'
+# Should be: 80 - 1
+line_length = 79
 
