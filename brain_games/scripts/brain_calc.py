@@ -14,11 +14,11 @@ print ('What is the result of the expression?')
 
 score = 0
 
-while score != 100:
+while score != 3:
     number1, number2, arithm, question, answer = 0, 0, '', '', 0
     arithmetic = ['+', '-', '*']
-    number1 = randint(0, 100)
-    number2 = randint(0, 100)
+    number1 = randint(0, 10)
+    number2 = randint(0, 10)
     arithm = random.choice(arithmetic)
     question = str(number1) + arithm + str(number2)
     if arithm == '+':
@@ -27,7 +27,7 @@ while score != 100:
         answer = number1 - number2
     elif arithm == '*':
         answer = number1 * number2
-    print('Question: ',question, answer)
+    print('Question: ',question)
     otvet = prompt.integer('Your answer: ')
     if otvet == answer:
         print('Correct!')
