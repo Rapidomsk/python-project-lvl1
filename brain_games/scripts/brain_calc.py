@@ -36,6 +36,6 @@ while score != 3:
             print('Congratulations,', name,'!')
         continue
     else:
-        print("""yes' is wrong answer ;(. Correct answer was 'no'.
-    Let's try again,""", name, '!')
+        print("'{}'".format(otvet), "is wrong answer ;(. Correct answer was", "'{}'".format(answer), 
+        ". Let's try again,", name,'!')
         break
